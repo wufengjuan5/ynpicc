@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/claim.css">
+
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/iscroll.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script type="text/javascript" src="../javascript/claim_info.js"></script>
+	<script type="text/javascript" src="../javascript/datePicker.js"></script>
+	<script type="text/javascript" src="../javascript/canvas.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back" id="claim_back1"></a></li>
+				<li>基本信息</li>
+				<li><a class="und_next" id="claim_next">下一步</a></li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<ol class="claim_ol">
+				<li>
+					<label>农户姓名</label>
+					<input type="text" placeholder="请输入农户姓名" class="cInfo_name">
+					<i class="cInfo_icon"></i>
+					<ul class="name_id_p" style="display: none;"> 
+					</ul>
+				</li>
+				<li>
+					<label>身份证号</label>
+					<input type="number" placeholder="请输入身份证号" class="cInfo_idnum">
+					<i class="cInfo_icon"></i>
+				</li>
+			</ol>
+			<p class="cInfo_search" id="cInfo_search">查询保单</p>
+			<ul class="claim_ul">
+				<li>
+					<label>保单号</label>
+					<input type="number" class="cInfo_policyNum" readonly="readonly">
+				</li>
+				<li class="claim_pos">
+					<label>受灾作物</label>
+					<span class="cInfo_span cInfo_szzw"></span>
+					<i class="cInfo_triangle"></i>
+					<ul class="claim_select_list claim_select_list3">
+					</ul>
+				</li>
+				<li class="claim_pos">
+					<label>自缴比例</label>
+					<span class="cInfo_span cInfo_zjbl"></span>
+					<i class="cInfo_triangle"></i>
+					<ul class="claim_select_list claim_select_list4">
+					</ul>
+				</li>
+				<li class="claim_pos">
+					<label>单位保额</label>
+					<span class="cInfo_span cInfo_zjbaoe"></span>
+					<i class="cInfo_triangle"></i>
+					<ul class="claim_select_list claim_select_list5">
+					</ul>
+				</li>
+				<li>
+					<label>查勘地点(乡镇)</label>
+					<input type="text" class="cInfo_ckdd_xz" placeholder="请点击选择乡镇" readonly="readonly">
+				</li>
+				<li>
+					<label>查勘地点(村)</label>
+					<input type="text" class="cInfo_ckdd_c" placeholder="请点击选择村名" readonly="readonly">
+				</li>
+				<li>
+					<label>联系电话</label>
+					<input type="number" class="cInfo_phone" placeholder="请输入电话号码" >
+				</li>
+				<li>
+					<label>承保面积</label>
+					<input type="number" class="cInfo_cbmj" placeholder="请输入承保面积">
+				</li>
+				</li>
+				<li class="claim_pos">
+					<label>土地属性</label>
+					<span class="cInfo_span cInfo_tdsx">承包地</span>
+					<i class="cInfo_triangle"></i>
+					<ul class="claim_select_list claim_select_list1">
+						<li>承包地</li>
+						<li>机动地</li>
+					</ul>
+				</li>
+				<li>
+					<label>灾害原因</label>
+					<span class="cInfo_span cInfo_zhyy">请选择</span>
+					<i class="cInfo_triangle"></i>
+					<ul class="claim_select_list claim_select_list2">
+					</ul>
+				</li>
+				<li class="cInfo_liZhsj">
+					<label>灾害时间</label>
+					<div class="cInfo_span cInfo_cbsj">
+						<span class="cInfo_span cInfo_text">请点击选择时间</span>
+						<span id="start_date"  class="cInfo_span cInfo_zhsj" ></span>
+					</div>
+					<!-- <input type="text" class="cInfo_cbsj" placeholder="请点击选择时间"> -->
+				</li>
+				<li>
+					<label>生长期</label>
+					<input type="text" class="cInfo_szq" value="无" placeholder="最多10个字" maxlength="10">
+				</li>
+				<li>
+					<label>生长期赔付比例</label>
+					<input type="number" class="cInfo_pfbl" placeholder="请输入生长期赔付比例" maxlength="10">
+					<i class="cInfo_bfh">%</i>
+				</li>
+				<li>
+					<label>已赔付金额</label>
+					<input type="number" class="cInfo_pfje" value="0" placeholder="最多10个字" maxlength="10">
+					<i class="cInfo_yuan">元</i>
+				</li>
+				<li style="height: 0.8rem;">
+					<label style="width: 18%;">查勘员</label>
+					<textarea class="cInfo_cky" cols="30" rows="3" maxlength="100" placeholder="最多100个字"></textarea>
+				</li>
+			</ul>
+			<div class="und_iscroll_wraper claim_iscroll_wraper1">
+				<p class="und_is_p"><input type="text" placeholder="请输入关键字"  class="und_bank_text"><span class="und_scrol_cancle claim_scrol_cancle1">取消</span></p>
+				<div class="und_iscroll_content">
+					<ul class="und_iscrol_ul claim_iscrol_ul1">
+						
+					</ul>
+				</div>
+			</div>
+			<div class="und_iscroll_wraper claim_iscroll_wraper2">
+				<p class="und_is_p"><input type="text" placeholder="请输入关键字"  class="und_bank_text"><span class="und_scrol_cancle claim_scrol_cancle2">取消</span></p>
+				<div class="und_iscroll_content">
+					<ul class="und_iscrol_ul claim_iscrol_ul2">
+						
+					</ul>
+				</div>
+			</div>
+			<div class="und_iscroll_wraper claim_iscroll_wraper3">
+				<p class="und_is_p claim_is_p">符合条件的保单</p>
+				<div class="und_iscroll_content">
+					<ul class="claim_iscrol_ul3">
+						<!-- <li>
+							<p class="cla_iscrol_p">
+								<span class="cla_iscrol_span1">张学友</span>
+								<span class="cla_iscrol_span2">330106198006158213</span>
+								<span class="cla_iscrol_span3">4.0000%</span>
+							</p>
+							<p class="cla_iscrol_p">
+								<span class="cla_iscrol_span1">玉米</span>
+								<span class="cla_iscrol_span2">南磨房地区平乐园社区居委会</span>
+							</p>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="und_mark" id="claim_mark1">
+		<div class="claim_remind">
+			<h1 class="cla_h1">未查询到保单，是否进行无保单查勘！</h1>
+			<p class="cla_p"><span class="cla_cancle cla_cancle1">取消</span><span class="cla_sure cla_sure1">确定</span></p>
+		</div>
+	</div>
+	<div class="und_mark" id="claim_mark2">
+		<div class="mark_remind">
+			<h1 class="mr_h1">提醒</h1>
+			<h2 class="mr_h2">您没有保存，是否确定退出？</h2>
+			<p class="mr_p"><span class="mr_cancle cla_cancle2">取消</span><span class="mr_sure cla_sure2">确定</span></p>
+		</div>
+	</div>
+</body>
+</html>

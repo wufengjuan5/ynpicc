@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/und_info.js"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script src="../javascript/canvas.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back" onclick="isShowUndMark()"></a></li>
+				<li>基本信息</li>
+				<li><a class="und_next" id="und_next1">下一步</a></li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<ol class="und_ol">
+				<li class="marg_top undOl_li1">
+					<label>投保险种</label>
+					<span class="undOl_select undOl_select1">中央政策性种植险</span>
+					<i class="und_triangle"></i>
+					<ul class="undOl_select1_list undOl_select1_list1 add_undOl_select1_list2">
+						<li>中央政策性种植险</li>
+						<li>地方政策性种植险</li>
+						<li>商业政策性种植险</li>
+						<li>商业性林果业种植险</li>
+					</ul>
+				</li>
+				<li class="marg_top undOl_li2">
+					<label>标的名称</label>
+					<span class="undOl_select undOl_select2">请选择标的名称</span>
+					<i class="und_triangle"></i>
+					<ul class="undOl_select1_list undOl_select1_list2 add_undOl_select1_list2">
+				
+					</ul>
+				</li>
+				<li class="marg_top">
+					<label>被保险人姓名</label>
+					<input type="text" placeholder="请输入投保姓名" class="uInfo_name">
+					<i class="und_photo goIdcardScan"></i>
+					<ul class="name_id_p"></ul>
+				</li>
+				<li class="marg_top marg_no undOl_li3">
+					<label>证件类型</label>
+					<span class="undOl_select undOl_select3">请选择证件类型</span>
+					<i class="und_triangle"></i>
+					<ul class="undOl_select1_list undOl_select1_list3 add_undOl_select1_list2">
+						<li>请选择证件类型</li>
+						<li paperid="0">身份证号</li>
+						<li paperid="1">社会信用代码</li>
+					</ul>
+				</li>
+				<li>
+					<label>证件号码</label>
+					<input type="number" placeholder="请输入证件号" class="uInfo_idnum">
+				</li>
+				<li>
+					<label>银行卡号</label>
+					<input type="number" placeholder="请输入银行卡号" class="uInfo_banknum">
+					<i class="und_photo goBankcardScan"></i>
+				</li>
+				<li>
+					<label>发卡银行</label>
+					<input type="text" placeholder="请输入发卡银行" class="uInfo_Issuer" readonly="readonly" >
+				</li>
+				<li>
+					<label>所在支行</label>
+					<input type="text" placeholder="请输入所在支行" class="uInfo_located" readonly="readonly" >
+				</li>
+				<li class="marg_top">
+					<label>联系方式</label>
+					<input type="number" placeholder="请输入联系方式" class="uInfo_tel">
+				</li>
+				<li class="marg_top">
+					<label>种植地点(乡/镇)</label>
+					<input type="text" placeholder="请输入种植地点(乡/镇)" readonly="readonly"  class="uInfo_towns" >
+					<i class="und_posit" onclick="PositionClick()"></i>
+				</li>
+				<li>
+					<label>种植地点(村)</label>
+					<input type="text" placeholder="请输入种植地点(村)" readonly="readonly"  class="uInfo_villages" >
+					<i class="und_posit" onclick="PositionClick()"></i>
+				</li>
+			</ol>
+			<div class="und_ka">
+				<ul class="und_tab_ul">
+					<li class="und_tab_active">身份证</li>
+					<li>银行卡</li>
+					<li>其他证件</li>
+				</ul>
+				<ol class="und_tab_ol">
+					<li>
+						<p class="und_tabOl_p" id="cameraTakePicture1" onclick="cameraTakePicture1()"><img src="../images/iv_camera.png" class="und_p_img1"></p>
+					</li>
+					<li>
+						<p class="und_tabOl_p" id="cameraTakePicture2" onclick="cameraTakePicture2()"><img src="../images/iv_camera.png" class="und_p_img1"></p>
+					</li>
+					<li>
+						<p class="und_tabOl_p" id="cameraTakePicture3" onclick="cameraTakePicture3()"><img src="../images/iv_camera.png" class="und_p_img1"></p>
+					</li>
+				</ol>
+			</div>
+			<p class="und_p">同步并退出</p>
+			<div class="und_iscroll_wraper und_iscroll_wraper1">
+				<p class="und_is_p"><input type="text" placeholder="请输入关键字"  class="und_bank_text"><span class="und_scrol_cancle und_bankscrol_cancle">取消</span></p>
+				<div class="und_iscroll_content" id="und_iscroll_bank">
+					<ul class="und_iscrol_ul und_iscrol_ul_bank">
+						
+					</ul>
+				</div>
+			</div>
+			<div class="und_iscroll_wraper und_iscroll_wraper2">
+				<p class="und_is_p"><input type="text" placeholder="请输入关键字" class="und_brunch_text"><span class="und_scrol_cancle und_brunchscrol_cancle">取消</span></p>
+				<div class="und_iscroll_content">
+					<ul class="und_iscrol_ul und_iscrol_ul_brunch">
+						
+					</ul>
+				</div>
+			</div>
+			<div class="und_iscroll_wraper und_iscroll_wraper3">
+				<p class="und_is_p"><input type="text" placeholder="请输入关键字" class="und_town_text"><span class="und_scrol_cancle und_townscrol_cancle">取消</span></p>
+				<div class="und_iscroll_content">
+					<ul class="und_iscrol_ul und_iscrol_ul_town">
+						
+					</ul>
+				</div>
+			</div>
+			<div class="und_iscroll_wraper und_iscroll_wraper4">
+				<p class="und_is_p"><input type="text" placeholder="请输入关键字" class="und_village_text"><span class="und_scrol_cancle und_villagescrol_cancle">取消</span></p>
+				<div class="und_iscroll_content">
+					<ul class="und_iscrol_ul und_iscrol_ul_village">
+						
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="und_mark" id="und_mark1">
+		<div class="mark_remind">
+			<h1 class="mr_h1">提醒</h1>
+			<h2 class="mr_h2">您没有保存，是否确定退出？</h2>
+			<p class="mr_p"><span class="mr_cancle mr_cancle1">取消</span><span class="mr_sure mr_sure1">确定</span></p>
+		</div>
+	</div>
+	<div class="und_mark" id="und_mark2">
+		<div class="mark_remind">
+			<h1 class="mr_h1">删除影像</h1>
+			<h2 class="mr_h2">确定要删除此影像文件？</h2>
+			<p class="mr_p"><span class="mr_cancle mr_cancle2">取消</span><span class="mr_sure mr_sure2">确定</span></p>
+		</div>
+	</div>
+	<div class="und_mark" id="und_mark3">
+		<div class="mark_remind">
+			<h1 class="mr_h1">提醒</h1>
+			<h2 class="mr_h2">退出后只会保存凭证信息，所有地块将丢失，是否仍要退出？</h2>
+			<p class="mr_p" style="margin-top: 0.10rem;"><span class="mr_cancle mr_cancle3">取消</span><span class="mr_sure mr_sure3">确定</span></p>
+		</div>
+	</div>
+</body>
+</html>

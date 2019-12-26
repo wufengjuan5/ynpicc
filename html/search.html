@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/get_policy.js"></script>
+	<script type="text/javascript" src="../javascript/get_claim.js"></script>
+	<script type="text/javascript" src="../javascript/search.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<p class="se_p">
+				<input type="text" name="underwriteSearch" placeholder="请输入投保人姓名" class="se_text" id="underwriteSearch">
+				<label class="se_cancle">取消</label>
+			</p>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<dl class="ut_dl ut_dl_search1">
+				<dt><img src="../images/search_empty.png" alt=""></dt>
+				<dd>没有任何搜索记录</dd>
+			</dl>
+			<div class="ud_tab_content ud_tab_search1" style="display: none;">
+				<ul class="ut_ul ut_ul_search1"></ul>
+			</div>
+		</section>
+		<div class="und_mark und_posmark">
+			<div class="und_posbox">
+				<p class="und_pbp1">
+					<img src="../images/iv_dialog_delete.png" class="und_pimg">
+					<b class="und_pb"></b>
+				</p>
+				<p class="und_pbp2"><span class="und_pspan und_pspan1">取消</span><span class="und_pspan und_pspan2"></span></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

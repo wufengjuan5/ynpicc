@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script type="text/javascript" src="../javascript/und_idcardscan.js"></script>
+	<script src="../javascript/canvas.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back"></a></li>
+				<li>身份证扫描页</li>
+				<li></li>
+			</ul>
+		</header>
+		<section>
+			<div class="is_scan">
+				<div class="is_cardsccan">
+					<dl class="is_dl">
+						<dt class="is_dt" id="is_dt"><img src="../images/id01.png" alt=""></dt>
+						<dd class="is_dd">点击图片正面识别</dd>
+					</dl>
+					<form class="is_form">
+						<p class="is_p is_p1">
+							<label class="is_label">姓名</label>
+							<input type="text" readonly="readonly" class="is_name">
+						</p>
+						<p class="is_p is_p1">
+							<label class="is_label">性别</label>
+							<input type="text" readonly="readonly" class="is_sex">
+						</p>
+						<p class="is_p is_p1">
+							<label class="is_label">民族</label>
+							<input type="text" readonly="readonly" class="is_nation">
+						</p>
+						<p class="is_p is_p2"><img class="is_headimg"></p>
+						<p class="is_p">
+							<label class="is_label">出生</label>
+							<input type="text" readonly="readonly" class="is_birth">
+						</p>
+						<p class="is_p is_p3">
+							<label class="is_label is_label1">住址</label>
+							<textarea rows="2" cols="18"  readonly="readonly" class="is_address"></textarea>
+						</p>
+						<p class="is_p">
+							<label class="is_label">号码</label>
+							<input type="text" readonly="readonly" class="is_cardnum">
+						</p>
+						<p class="is_p is_p4"><img class="is_cardimg"></p>
+					</form>
+				</div>
+				<div class="is_backsccan">
+					<dl class="is_dl">
+						<dt class="is_dt" id="is_dt2"><img src="../images/id01.png" alt=""></dt>
+						<dd class="is_dd">点击图片背面识别</dd>
+					</dl>
+					<form class="is_form is_form2">
+						<p class="is_p">
+							<label class="is_label">签发机关</label>
+							<input type="text" readonly="readonly" class="is_sign" style="width: 70%;">
+						</p>
+						<p class="is_p">
+							<label class="is_label">有效期限</label>
+							<input type="text" readonly="readonly" class="is_useful" style="width: 70%;">
+						</p>
+						<p class="is_p is_p4"><img class="is_backimg"></p>
+					</form>
+				</div>
+				<button class="is_finish">完成</button>
+			</div>
+		</section>	
+	</div>
+</body>
+</html>

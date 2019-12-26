@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script type="text/javascript" src="../javascript/register_info.js"></script>
+	<script type="text/javascript" src="../javascript/canvas.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back" id="regBack"></a></li>
+				<li>被保险人信息</li>
+				<li><a class="und_next" id="regPut">提交</a></li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<ol class="und_ol">
+				<li class="marg_top">
+					<label>被保险人姓名</label>
+					<input type="text" placeholder="请输入保险人姓名" class="rInfo_name">
+					<i class="und_photo goIdcardScan"></i>
+					<p class="name_id_p">
+					</p>
+				</li>
+				<li class="marg_top marg_no undOl_li3">
+					<label>证件类型</label>
+					<span class="undOl_select regOl_select3">请选择证件类型</span>
+					<i class="und_triangle"></i>
+					<ul class="undOl_select1_list undOl_select1_list3 add_undOl_select1_list2">
+						<li>请选择证件类型</li>
+						<li paperid="0">身份证号</li>
+						<li paperid="1">社会信用代码</li>
+					</ul>
+				</li>
+				<li>
+					<label>证件号码</label>
+					<input type="text" placeholder="请输入证件号码" class="rInfo_idnum">
+				</li>
+				<li class="marg_top">
+					<label>银行卡号</label>
+					<input type="text" placeholder="请输入银行卡号" class="rInfo_banknum">
+					<i class="und_photo goBankcardScan"></i>
+				</li>
+				<li>
+					<label>发卡银行</label>
+					<input type="text" class="uInfo_Issuer" readonly="readonly" >
+				</li>
+				<li>
+					<label>所在支行</label>
+					<input type="text" class="uInfo_located" readonly="readonly" >
+				</li>
+				<li class="marg_top">
+					<label>手机号码</label>
+					<input type="text" placeholder="请输入手机号码" class="rInfo_tel">
+				</li>
+			</ol>
+			<div class="und_ka">
+				<ul class="und_tab_ul">
+					<li class="und_tab_active">身份证</li>
+					<li>银行卡</li>
+					<li>其他证件</li>
+				</ul>
+				<ol class="und_tab_ol">
+					<li>
+						<p class="und_tabOl_p" id="cameraTakePicture1" onclick="cameraTakePicture1()"><img src="../images/iv_camera.png" class="und_p_img1"></p>
+					</li>
+					<li>
+						<p class="und_tabOl_p" id="cameraTakePicture2" onclick="cameraTakePicture2()"><img src="../images/iv_camera.png" class="und_p_img1"></p>
+					</li>
+					<li>
+						<p class="und_tabOl_p" id="cameraTakePicture3" onclick="cameraTakePicture3()"><img src="../images/iv_camera.png" class="und_p_img1"></p>
+					</li>
+				</ol>
+			</div>
+			<div class="und_iscroll_wraper und_iscroll_wraper1">
+				<p class="und_is_p"><input type="text" placeholder="请输入关键字"  class="und_bank_text"><span class="und_scrol_cancle und_bankscrol_cancle">取消</span></p>
+				<div class="und_iscroll_content" id="und_iscroll_bank">
+					<ul class="und_iscrol_ul und_iscrol_ul_bank">
+						
+					</ul>
+				</div>
+			</div>
+			<div class="und_iscroll_wraper und_iscroll_wraper2">
+				<p class="und_is_p"><input type="text" placeholder="请输入关键字" class="und_brunch_text"><span class="und_scrol_cancle und_brunchscrol_cancle">取消</span></p>
+				<div class="und_iscroll_content">
+					<ul class="und_iscrol_ul und_iscrol_ul_brunch">
+						
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="und_mark" id="und_mark2">
+		<div class="mark_remind">
+			<h1 class="mr_h1">删除影像</h1>
+			<h2 class="mr_h2">确定要删除此影像文件？</h2>
+			<p class="mr_p"><span class="mr_cancle mr_cancle2">取消</span><span class="mr_sure mr_sure2">确定</span></p>
+		</div>
+	</div>
+</body>
+</html>

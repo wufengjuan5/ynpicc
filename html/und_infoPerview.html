@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/und_infoPerview.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back"></a></li>
+				<li>信息预览</li>
+				<li>
+					<a class="und_next" id="view_submit">提交</a>
+				</li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<ol class="und_ip_ol">
+				<li>
+					<strong>投保险种</strong>
+					<em class="und_ip_em1"></em>
+				</li>
+				<li>
+					<strong>标的名称</strong>
+					<em class="und_ip_em2"></em>
+				</li>
+				<li>
+					<strong>被保险人姓名</strong>
+					<em class="und_ip_em3"></em>
+				</li>
+				<li>
+					<strong>身份证号</strong>
+					<em class="und_ip_em4"></em>
+				</li>
+				<li>
+					<strong>银行卡号</strong>
+					<em class="und_ip_em5"></em>
+				</li>
+				<li>
+					<strong>联系方式</strong>
+					<em class="und_ip_em6"></em>
+				</li>
+				<li>
+					<strong>投保地址</strong>
+					<em class="und_ip_em7"></em>
+				</li>
+				<li>
+					<strong>保险数量</strong>
+					<em class="und_ip_em8"></em>
+				</li>
+				<li>
+					<strong>地块数量</strong>
+					<em class="und_ip_em9"></em>
+				</li>
+				<li>
+					<strong>单位保险金额</strong>
+					<em class="und_ip_em10"></em>
+				</li>
+				<li>
+					<strong>保费自缴比例</strong>
+					<em class="und_ip_em11"></em>
+				</li>
+				<li>
+					<strong>保险费率</strong>
+					<em class="und_ip_em12"></em>
+				</li>
+				<li>
+					<strong>总保险费</strong>
+					<em class="und_ip_em13"></em>
+				</li>
+				<li>
+					<strong>农户自缴保险费</strong>
+					<em class="und_ip_em14"></em>
+				</li>
+				<div class="fjxlist">
+					
+				</div>
+				<li>
+					<strong>全部险种总保额</strong>
+					<em class="und_ip_zbe"></em>
+				</li>
+				<li>
+					<strong class="strong_zbxf">全部险种总保险费</strong>
+					<em class="und_ip_zbxf"></em>
+				</li>
+				<li>
+					<strong class="strong_nhzjbxf">全部险种农户自缴保险费</strong>
+					<em class="und_ip_nhzjbxf"></em>
+				</li>
+				<li>
+					<strong>证件图片数量</strong>
+					<em class="und_ip_em15">0张</em>
+				</li>
+				<li>
+					<strong>标的图片数量</strong>
+					<em class="und_ip_em16">0张</em>
+				</li>
+				<li>
+					<strong>保单开始日期</strong>
+					<em class="und_ip_em18">0张</em>
+				</li>
+				<li>
+					<strong>保单截止日期</strong>
+					<em class="und_ip_em19">0张</em>
+				</li>
+				<li>
+					<strong>创建时间</strong>
+					<em class="und_ip_em17"></em>
+				</li>
+				<li style="margin-top: 0.2rem;">
+					<span id="signatureBtn">
+						农户签名
+					</span>
+				</li>
+			</ol>
+			<div class="und_ip_pic"></div>
+		</section>
+	</div>
+	<div class="und_mark view_mark">
+		<div class="mark_remind">
+			<h1 class="mr_h1">提醒</h1>
+			<h2 class="mr_h2">请核对信息是否正确！</h2>
+			<p class="mr_p"><span class="mr_cancle vw_cancle">取消</span><span class="mr_sure vw_sure">确定</span></p>
+		</div>
+	</div>
+	<div class="und_mark upload_mark">
+		<div class="mark_upload ">
+			<h1 class="mr_h1"></h1>
+			<h2 class="mr_h2"><span class="loading"></span><span class="loadingtext">正在上传...</span></h2>
+		</div>
+	</div>
+	<div class="finish_mark">
+		<div class="finish_box">
+			<img src="../images/iv_paintet.png" class="fb_img">
+			<p class="fb_p1">保单提交成功！</p>
+			<p class="fb_p2"><span class="fb_span1">完成</span></p>
+		</div>
+	</div>
+</body>
+</html>

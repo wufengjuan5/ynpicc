@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/claim_preview.js"></script>
+	<script type="text/javascript" src="../javascript/canvas.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back"></a></li>
+				<li>信息预览</li>
+				<li>
+					<a class="und_next" id="claimPreview_submit">提交</a>
+				</li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<ol class="und_ip_ol claim_ip_ol">
+				<li>
+					<strong>受灾作物</strong>
+					<em class="claim_ip_em1"></em>
+				</li>
+				<li>
+					<strong>农户姓名</strong>
+					<em class="claim_ip_em2"></em>
+				</li>
+				<li>
+					<strong>身份证号</strong>
+					<em class="claim_ip_em3"></em>
+				</li>
+				<li>
+					<strong>保单号</strong>
+					<em class="claim_ip_em4"></em>
+				</li>
+				<li>
+					<strong>联系方式</strong>
+					<em class="claim_ip_em5"></em>
+				</li>
+				<li>
+					<strong>地块数量</strong>
+					<em class="claim_ip_em6"></em>
+				</li>
+				<li>
+					<strong>图片数量</strong>
+					<em class="claim_ip_em7"></em>
+				</li>
+				<li>
+					<strong>受灾原因</strong>
+					<em class="claim_ip_em8"></em>
+				</li>
+				<li>
+					<strong>查勘地点</strong>
+					<em class="claim_ip_em9"></em>
+				</li>
+				<li>
+					<strong>承保面积</strong>
+					<em class="claim_ip_em10"></em>
+				</li>
+				<li>
+					<strong>损失程度</strong>
+					<em class="claim_ip_em11"></em>
+				</li>
+				<li>
+					<strong>受灾面积</strong>
+					<em class="claim_ip_em12"></em>
+				</li>
+				<li>
+					<strong>受灾时间</strong>
+					<em class="claim_ip_em14"></em>
+				</li>
+				<li>
+					<strong>创建时间</strong>
+					<em class="claim_ip_em15"></em>
+				</li>
+			</ol>
+		</section>
+	</div>
+	<div class="und_mark view_mark">
+		<div class="mark_remind">
+			<h1 class="mr_h1">提醒</h1>
+			<h2 class="mr_h2">请核对信息是否正确！</h2>
+			<p class="mr_p"><span class="mr_cancle vw_cancle">取消</span><span class="mr_sure vw_sure">确定</span></p>
+		</div>
+	</div>
+	<div class="und_mark upload_mark">
+		<div class="mark_upload ">
+			<h1 class="mr_h1"></h1>
+			<h2 class="mr_h2"><span class="loading"></span><span class="loadingtext">正在上传...</span></h2>
+		</div>
+	</div>
+	<div class="finish_mark">
+		<div class="finish_box">
+			<img src="../images/iv_paintet.png" class="fb_img">
+			<p class="fb_p1">保单提交成功！</p>
+			<p class="fb_p2"><span class="fb_span1">完成</span><span>打印</span></p>
+		</div>
+	</div>
+</body>
+</html>

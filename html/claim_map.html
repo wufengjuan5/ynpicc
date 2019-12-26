@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/leaflet.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/leaflet.draw.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/map.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/MarkerCluster.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/MarkerCluster.Default.css"/>
+	
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back" id="claMapPrev" href="javascript:void(0)"></a></li>
+				<li>地块采集</li>
+				<li>
+					<a href="javascript:void(0)" class="und_next" id="claMapNext">下一步</a>
+				</li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<!-- <div class="map_hint">地块数量:0块    地块总面积: 0.0亩    投保总面积:0.0亩</div> -->
+				<div class="button-list">
+					<span id="layer-control" class="mapicon unselected">
+						
+					</span>
+					<span id="locate-control" class="mapicon unselected">
+						
+					</span>
+					<span id="select-control" class="mapicon unselected">
+						
+					</span>
+					<span id="draw-control" class="mapicon unselected">
+						
+					</span>
+					<span id="edit-control" class="mapicon unselected">
+						
+					</span>
+				</div>
+				<div class="edit-button-list">
+					<span id="edit" class="editicon unselected">
+						
+					</span>
+					<span id="sz" class="editicon unselected">
+						
+					</span>
+					<span id="delete" class="editicon unselected">
+						
+					</span>
+				</div>
+				<div id="draw-toolbar">
+					<span id="finish" class="baricon">
+						
+					</span>
+					<span id="cancel" class="baricon">
+						
+					</span>
+					
+				</div>
+				<div id="info-panel">
+					<div class="title">
+						地块受灾信息
+					</div>
+					<div class="content">
+						<div class="box">图形总面积：<span class="txzmj"></span>亩</div>
+						<div class="box">受灾作物：<span class="szzw"></span></div>
+						<div class="box"><label for="tb-area">受灾面积：</label> <input name="sz-area"  type="text" /> 亩</div>
+						<div class="box"><label for="tb-area">损失程度：</label> <input name="ss-degree"  type="text" /> %</div>
+					</div>
+					<div class="button-bar">
+						<input id="info-cancel" type="button" class="ui-btn" value="取消" />
+						<input id="info-ok" type="button" class="ui-btn" value="确定" />
+					</div>
+				</div>
+				<span id="camera" class="mapicon">
+						
+				</span>
+			<div id="map">
+				
+			</div>
+		</section>
+	</div>
+	<div class="und_mark" id="und_mark2">
+		<div class="mark_remind">
+			<h1 class="mr_h1">提醒</h1>
+			<h2 class="mr_h2">您当前位置不在地块中，是否要保留照片？</h2>
+			<p class="mr_p"><span class="mr_cancle mr_cancle2">取消</span><span class="mr_sure mr_sure2">确定</span></p>
+		</div>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../javascript/leaflet-src.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/leaflet.draw-src.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/L.LabelTextCollision.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/leaflet.rotatedMarker.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/transform.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/clipper.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/leaflet.markercluster-src.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/leaflet-image.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/index.js"></script>
+	<script type="text/javascript" src="../javascript/claim_map.js"></script>
+	<script type="text/javascript" src="../javascript/canvas.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script type="text/javascript" src="../javascript/und_bankcardscan.js"></script>
+	<script src="../javascript/canvas.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back"></a></li>
+				<li>银行卡扫描页</li>
+				<li></li>
+			</ul>
+		</header>
+		<section>
+			<div class="ib_scan">
+				<dl class="is_dl">
+					<dt class="is_dt" id="id_dt"><img src="../images/id02.png" alt=""></dt>
+					<dd class="is_dd">点击图片识别银行卡</dd>
+				</dl>
+				<form class="id_form">
+					<p class="id_p">
+						<label class="id_label">卡号</label>
+						<input type="text" class="id_number">
+					</p>
+					<p class="id_p">
+						<label class="id_label">银行</label>
+						<input type="text" class="id_bank">
+					</p>
+					<p class="id_p">
+						<label class="id_label">名称</label>
+						<input type="text" class="id_name">
+					</p>
+					<p class="id_p">
+						<label class="id_label">类型</label>
+						<input type="text" class="id_type">
+					</p>
+					<p class="id_p">
+						<label class="id_label">日期</label>
+						<input type="text" class="id_date">
+					</p>
+					<p class="id_p id_p1">
+						<img class="bankcimg">
+					</p>
+				</form>
+				<button class="id_finish">完成</button>
+			</div>
+		</section>	
+	</div>
+</body>
+</html>

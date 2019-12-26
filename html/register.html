@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script type="text/javascript" src="../javascript/register.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a href="./kit.html" class="ud_back"></a></li>
+				<li>投保人登记</li>
+				<li>
+					<span class="ud_new" id="regNews">新建</span>
+				</li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<ol class="ud_tab">
+				<li class="ud_active">未完成</li>
+				<li>已完成</li>
+			</ol>
+			<div class="ud_tab_content">
+				<div class="ut_content ut_content_unfinish">
+					<dl class="ut_dl  reg_dl_unfinish">
+						<dt><img src="../images/search_empty.png" alt=""></dt>
+						<dd>没有任何登记记录</dd>
+					</dl>
+					<ul class="ut_ul reg_ul_unfinish">
+						<!-- <li class="reg_li">
+							<p class="reg_name">姓名：温柔</p>
+							<p class="reg_idNum">身份证号：142322199305236985</p>
+							<span class="reg_arrow">》</span>
+						</li> -->
+					</ul>
+				</div>
+				<div class="ut_content ut_content_finish">
+					<dl class="ut_dl  reg_dl_finish">
+						<dt><img src="../images/search_empty.png" alt=""></dt>
+						<dd>没有任何登记记录</dd>
+					</dl>
+					<ul class="ut_ul reg_ul_finish"></ul>
+				</div>
+			</div>
+		</section>
+		<div class="und_mark und_posmark" style="display: none;">
+			<div class="und_posbox">
+				<p class="und_pbp1">
+					<img src="../images/iv_dialog_delete.png" class="und_pimg">
+					<b class="und_pb">确认删除所选内容？</b>
+				</p>
+				<p class="und_pbp2"><span class="und_pspan und_pspan1">取消</span><span class="und_pspan und_pspan2 und_delete">删除</span></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

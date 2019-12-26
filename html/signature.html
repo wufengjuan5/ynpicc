@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+	<script type="text/javascript" src="../javascript/jquery.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/esign.js"></script>
+	<script type="text/javascript" src="../javascript/signature.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back"></a></li>
+				<li>数字签名</li>
+				<li></li>
+			</ul>
+		</header>
+		<section>
+			<div class="signature">
+				<div id="editing_area">
+					<canvas  id="canvasEdit"></canvas>
+				</div>
+			</div>
+			<div class="btnDiv">
+				<a id="sign_ok" class="okBtn">保存</a>
+				<a id="sign_clear" class="clearBtn">清除</a>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

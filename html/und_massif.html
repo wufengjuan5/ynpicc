@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/leaflet.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/leaflet.draw.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/map.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/MarkerCluster.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/MarkerCluster.Default.css"/>
+	
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back"></a></li>
+				<li>地块采集</li>
+				<li>
+					<a href="javascript:void(0)" class="und_next" id="undMapNext">下一步</a>
+				</li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<div class="map_hint">地块数量:0块    地块总面积: 0.0亩    投保总面积:0.0亩</div>
+				<div class="button-list">
+					<span id="layer-control" class="mapicon unselected">
+						
+					</span>
+					<span id="locate-control" class="mapicon unselected">
+						
+					</span>
+					<span id="select-control" class="mapicon unselected">
+						
+					</span>
+					<span id="draw-control" class="mapicon unselected">
+						
+					</span>
+					<span id="edit-control" class="mapicon unselected">
+						
+					</span>
+					<span id="xub-control" class="mapicon unselected">
+						
+					</span>
+				</div>
+				<div class="search-button">
+					<input type="text" name="searchWord" id="" value="" placeholder="请输入投保人姓名" />
+				</div>
+				<div class="search-result-list">
+					
+				</div>
+				<div class="edit-button-list">
+					<span id="edit" class="editicon unselected">
+						
+					</span>
+					<span id="mj" class="editicon unselected">
+						
+					</span>
+					<span id="merge" class="editicon unselected">
+						
+					</span>
+					<span id="clip" class="editicon unselected">
+						
+					</span>
+					<span id="delete" class="editicon unselected">
+						
+					</span>
+				</div>
+				<div id="draw-toolbar">
+					<span id="finish" class="baricon">
+						
+					</span>
+					<span id="cancel" class="baricon">
+						
+					</span>
+					
+				</div>
+				<div id="info-panel">
+					<div class="title">
+						修改投保面积
+					</div>
+					<div class="content">
+						<label for="tb-area">投保面积</label> <input name="tb-area"  type="text" /> 亩
+					</div>
+					<div class="button-bar">
+						<input id="info-cancel" type="button" class="ui-btn" value="取消" />
+						<input id="info-ok" type="button" class="ui-btn" value="确定" />
+					</div>
+				</div>
+				<span id="camera" class="mapicon">
+						
+				</span>
+			<div id="map">
+				
+			</div>
+		</section>
+	</div>
+	<div class="und_mark" id="und_mark2">
+		<div class="mark_remind">
+			<h1 class="mr_h1">提醒</h1>
+			<h2 class="mr_h2">您当前位置不在地块中，是否要保留照片？</h2>
+			<p class="mr_p"><span class="mr_cancle mr_cancle2">取消</span><span class="mr_sure mr_sure2">确定</span></p>
+		</div>
+	</div>
+	<div class="und_mark" id="und_mark3">
+		<div class="mark_remind">
+			<h1 class="mr_h1">请打开GPS连接</h1>
+			<h2 class="mr_h2">您获取到的坐标信息有误,请打开GPS和移动网络定位后重新拍摄照片！</h2>
+			<p class="mr_p"><span class="mr_cancle mr_cancle3">取消</span><span class="mr_sure mr_sure3">设置</span></p>
+		</div>
+	</div>
+	<div class="und_mark" id="und_mark4">
+		<div class="mark_remind">
+			<h1 class="mr_h1">请打开GPS连接</h1>
+			<h2 class="mr_h2">为了定位更精确,请先打开GPS</h2>
+			<p class="mr_p"><span class="mr_cancle mr_cancle4">取消</span><span class="mr_sure mr_sure4">设置</span></p>
+		</div>
+	</div>
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script src="../javascript/leaflet-src.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script src="../javascript/leaflet.draw-src.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/L.LabelTextCollision.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/leaflet.rotatedMarker.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/configUrl.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/AjaxGetPost.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/errorCode.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/transform.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/leaflet.markercluster-src.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/leaflet-image.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/index.js"></script>
+	<script type="text/javascript" src="../javascript/map.js"></script>
+	<script type="text/javascript" src="../javascript/und_massif.js"></script>
+	<script src="../javascript/canvas.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

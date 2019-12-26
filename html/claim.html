@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/claim.css">
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script type="text/javascript" src="../javascript/iscroll.js"></script>
+	<script type="text/javascript" src="../javascript/configUrl.js"></script>
+	<script type="text/javascript" src="../javascript/errorCode.js"></script>
+	<script type="text/javascript" src="../javascript/AjaxGetPost.js"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script type="text/javascript" src="../javascript/get_claim.js"></script>
+	<script type="text/javascript" src="../javascript/claim.js"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a href="../index.html" class="ud_back"></a></li>
+				<li>理赔</li>
+				<li>
+					<a class="ud_search" id="cla_search"></a>
+					<a class="ud_new" id="claim_new">新建</a>
+				</li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<ol class="ud_tab" id="ud_tab2">
+				<li class="ud_active">未完成</li>
+				<li>已完成</li>
+			</ol>
+			<div class="ud_tab_content">
+				<div class="ut_content cla_content_unfinish">
+					<ul class="ut_ul cla_ul_unfinish"></ul>
+					<dl class="ut_dl cla_dl_unfinish"  style="display:none">
+						<dt><img src="../images/search_empty.png" alt=""></dt>
+						<dd>没有任何理赔记录</dd>
+					</dl>
+				</div>
+				<div class="ut_content cla_content_finish" >
+					<div class="loading_image"></div>
+					<ul class="ut_ul cla_ul_finish"></ul>
+					<dl class="ut_dl cla_dl_finish" style="display:none">
+						<dt><img src="../images/search_empty.png" alt=""></dt>
+						<dd>没有任何理赔记录</dd>
+					</dl>
+				</div>
+			</div>
+		</section>
+		<div class="und_mark und_posmark" style="display: none;">
+			<div class="und_posbox">
+				<p class="und_pbp1">
+					<img src="../images/iv_dialog_delete.png" class="und_pimg">
+					<b class="und_pb">确认删除所选内容？</b>
+				</p>
+				<p class="und_pbp2"><span class="und_pspan und_pspan1">取消</span><span class="und_pspan und_pspan2 und_delete">删除</span></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

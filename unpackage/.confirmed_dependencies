@@ -1,0 +1,77 @@
+{
+  "index.html": {
+    "refer": [
+      "html/underwrite.html",
+      "html/claim.html",
+      "html/personal.html"
+    ],
+    "resources": []
+  },
+  "html/claim.html": {
+    "refer": [
+      "index.html"
+    ],
+    "resources": []
+  },
+  "html/underwrite.html": {
+    "refer": [
+      "index.html",
+      "html/search.html",
+      "html/und_info.html",
+      "main.html",
+      "login.html"
+    ],
+    "resources": []
+  },
+  "html/search.html": {
+    "refer": [
+      "html/underwrite.html"
+    ],
+    "resources": []
+  },
+  "html/und_info.html": {
+    "refer": [
+      "html/und_massif.html",
+      "html/underwrite.html"
+    ],
+    "resources": []
+  },
+  "html/und_massif.html": {
+    "refer": [
+      "html/und_info.html",
+      "html/und_payment.html",
+      "login.html"
+    ],
+    "resources": []
+  },
+  "html/personal.html": {
+    "refer": [
+      "index.html",
+      "login.html"
+    ],
+    "resources": []
+  },
+  "login.html": {
+    "refer": [
+      "index.html",
+      "main.html"
+    ]
+  },
+  "html/und_payment.html": {
+    "refer": [
+      "html/und_massif.html",
+      "html/und_infoPerview.html"
+    ]
+  },
+  "main.html": {
+    "refer": [
+      "html/underwrite.html",
+      "html/personal.html"
+    ]
+  },
+  "html/und_infoPerview.html": {
+    "refer": [
+      "html/und_payment.html"
+    ]
+  }
+}

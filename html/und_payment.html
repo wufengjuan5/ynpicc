@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="telephone=no" name="format-detection">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="../css/index.css">
+	<script type="text/javascript" src="../javascript/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../cordova.js"></script>
+	<script type="text/javascript" src="../cordova_plugins.js"></script>
+	<script src="../javascript/configUrl.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/AjaxGetPost.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/errorCode.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../javascript/main.js"></script>
+	<script type="text/javascript" src="../javascript/und_payment.js"></script>
+	<script src="../javascript/datePicker.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<ul>
+				<li><a class="ud_back"></a></li>
+				<li>缴费信息</li>
+				<li>
+					<a class="und_next" id="und_paynext">下一步</a>
+				</li>
+			</ul>
+		</header>
+		<section>
+			<p class="und_hint"></p>
+			<ol class="und_ol und_pay_ol">
+				<li>
+					<label>地块面积</label>
+					<span class="und_tri_span1"></span><i style="font-size: 0.12rem;">亩</i>
+				</li>
+				<li class="marg_top undOl_li2">
+					<label>标的名称</label>
+					<span class=" undOl_select undOl_select2">请选择标的名称</span>
+					<i class="und_triangle"></i>
+					<ul class="und_tri_ul undOl_select1_list undOl_select1_list2">
+					</ul>
+				</li> 
+				<li>
+					<label>单位保额</label>
+					<span class="und_tri_span2"></span>
+					<i class="und_triangle"></i>
+					<ul class="und_tri_ul und_tri_ul1"></ul>
+				</li>
+				<li>
+					<label>保险费率</label>
+					<span class="und_tri_span4"></span>
+					<i class="und_triangle"></i>
+					<ul class="und_tri_ul und_tri_ul3"></ul>
+				</li>
+				<li>
+					<label>保费自缴比例</label>
+					<span class="und_tri_span3"></span>
+					<i class="und_triangle"></i>
+					<ul class="und_tri_ul und_tri_ul2"></ul>
+				</li>
+				<li class="marg_top">
+					<label>单位保险费</label>
+					<span class="unit_insurance"></span>
+				</li>
+				<li>
+					<label>保险数量</label>
+					<span class="und_tri_span5"></span><i style="font-size: 0.12rem;">亩</i>
+				</li>
+				<li>
+					<label>总保险费</label>
+					<span class="gross_premium"></span>
+				</li>
+				<li>
+					<label>农户自缴保险费</label>
+					<span class="farmer_payment"></span>
+				</li>
+				<li>
+					<label>保单开始日期</label>
+					<span id="start_date"></span>
+				</li>
+				<li>
+					<label>保单截止日期</label>
+					<span id="end_date"></span>
+				</li>
+				<li class="txtarea_li">
+					<label>备　注</label>
+					<textarea cols="30" rows="3" maxlength="100" placeholder="最多100个字" class="remark">无</textarea>
+				</li>
+				
+				<li>
+					<span id="addFJX">
+						添加附加险
+					</span>
+				</li>
+			</ol>
+		</section>
+	</div>
+</body>
+</html>
